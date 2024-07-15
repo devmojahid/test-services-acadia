@@ -1,0 +1,7 @@
+{
+    "name": "Blog Plugin",
+    "slug": "blog-plugin",
+    "description": "A sample blog plugin for blog managment.",
+    "version": "1.0.0",
+    "dependencies": []
+}

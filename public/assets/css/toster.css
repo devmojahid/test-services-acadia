@@ -1,0 +1,38 @@
+#toaster-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.toaster {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+}
+
+.toaster.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toaster button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 15px;
+}
