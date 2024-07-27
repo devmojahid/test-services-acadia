@@ -16,9 +16,7 @@ export default defineConfig({
 
     ],
     server: {
-        hmr: {
-            host: 'localhost',
-        },
+        host: 'test-services-acadia.test',
     },
     resolve: {
         alias: {

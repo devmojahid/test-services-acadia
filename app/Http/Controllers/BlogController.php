@@ -46,6 +46,7 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
+
     public function show(Blog $blog)
     {
         //
@@ -73,7 +74,6 @@ class BlogController extends Controller
     public function destroy(Request $request)
     {
         $blog = Blog::find($request->id);
-        dd($blog);
         session()->flash('success', 'Blog deleted successfully');
         return redirect()->back()->with('success', 'Blog deleted successfully');
     }
