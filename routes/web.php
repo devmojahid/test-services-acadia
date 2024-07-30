@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WidgetController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,8 +36,13 @@ Route::get("/media/{any?}", function () {
 Route::post('/media/upload', [MediaController::class, 'upload'])->name('media.upload');
 
 
+Route::get('/pagebuilder', function () {
+    return view('pagebuilder.editor');
+});
 
-
+Route::post('/render-widget', [WidgetController::class, 'render'])->name('render-widget');
+Route::post('/render-controls', [WidgetController::class, 'renderControls'])->name('render-controls');
+Route::post('/save-page', [WidgetController::class, 'savePage'])->name('save-page');
 
 
 

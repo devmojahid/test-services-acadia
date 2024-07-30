@@ -13,6 +13,7 @@ class WidgetController extends Controller
         // $data = $request->input('data');
         // $widgetClass = \App\Pagebuilder\Widgets\WidgetRegistry::getWidget($widget);
         // return view($widgetClass::$view, ['data' => $data])->render();
+
         $widgetClass = $request->input('widget_class');
         $widget = new $widgetClass();
         $widgetName = $widget::getName();
@@ -34,7 +35,6 @@ class WidgetController extends Controller
         // } catch (\Exception $e) {
         //     return response()->json(['error' => $e->getMessage()], 500);
         // }
-
     }
 
     public function renderControls(Request $request)
